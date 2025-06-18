@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Grid Demo</title>
+
+</head>
+
+<body>
+    <br><br><br>
+    <h1 class="text-blue-500 text-center font-bold text-3xl">Grid Demo</h1>
+    <br>
+    <div class="border-2 border-red-500 w-[80vw] h-[80vh] grid grid-cols-4 mx-auto gap-10 p-5">
+        <div class="border">1</div>
+        <div class="border m-auto w-full animate-bounce"><img src="tshirt.png" alt=""></div>
+        <div class="border col-span-2 animate-spin hover:bg-green-200">3</div>
+        <div class="border row-span-2 animate-ping">4</div>
+        <div class="border col-span-3 row-span-2">5</div>
+    </div>
+    <br>
+
+    <!-- Effect -->
+    <div class="flex">
+        <p
+            class="animate-pulse bg-green-200 hover:bg-blue-500 hover:border hover:shadow-md shadow-red-300 hover:text-white w-20 h-20 mx-auto">
+            Hover</p>
+        <p
+            class="bg-red-200 active:b pg-red-500 active:border active:shadow-md shadow-red-300 active:text-white mx-auto w-20 h-20">
+            Active</p>
+    </div>
+
+    <br><br><br>
+</body>
+
+</html>

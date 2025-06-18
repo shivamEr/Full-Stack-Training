@@ -1,0 +1,38 @@
+#relative-container{
+    height: 200px;
+    width: 400px;
+    border: 2px solid red;
+}
+
+#relative-container > div{
+    border: 2px solid aqua;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#relative-container > div:nth-child(2){
+    position: relative;
+    background-color: rgb(24, 190, 127);
+    right: 150px;
+}
+
+
+#absolute-container{
+    height: 200px;
+    width: 400px;
+    border: 2px solid red;
+}
+
+#absolute-container > div{
+    border: 2px solid aqua;
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+}
+
+#absolute-container > div:nth-child(2){
+    position: relative;
+    background-color: rgb(24, 190, 127);
+    right: 150px;
+}

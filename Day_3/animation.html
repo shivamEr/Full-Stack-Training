@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition & Animation</title>
+
+    <style>
+        .box1 {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: blueviolet;
+
+            animation-name: move;
+            /* Ye define karta hai kaunsa @keyframes apply hoga */
+            animation-duration: 2s;
+            /* Animation kitne time me complete hoga - yaha 2 second */
+            animation-delay: 2s;
+            /* Animation start hone se pehle ka wait time - yaha 2 second */
+            animation-timing-function: cubic-bezier(.34, .08, .55, .95);
+            /* Animation ki speed curve ko control karta hai - smooth motion ke liye */
+            animation-iteration-count: 1;
+            /* Animation kitni baar chalega - 1 baar chalega */
+            animation-fill-mode: forwards;
+            /* Animation ke baad box wahi final position pe rahega */
+
+        }
+
+        /* Ye keyframes define karta hai animation ka start aur end ka behaviour */
+        @keyframes move {
+            from {
+                transform: translateX(0px);
+                /* Starting position - X axis pe 0px */
+            }
+
+            to {
+                transform: translateX(500px);
+                /* Ending position - X axis pe 500px right move karega */
+            }
+        }
+
+        @keyframes rectangleMove {
+            0% {
+                transform: translateX(0px);
+            }
+
+            25% {
+                transform: translateX(500px);
+            }
+
+            50% {
+                transform: translateY(500px) translateX(500px) rotate(30deg);
+            }
+
+            75% {
+                transform: translateY(500px) translateX(0px);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg) translate;
+            }
+
+        }
+
+        .box2 {
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-name: rectangleMove;
+
+            animation-timing-function: ease-in-out;
+            /* Start aur end slow, beech me fast */
+            animation-iteration-count: 5;
+            /* Animation 5 baar chalega */
+            animation-direction: alternate;
+            /* Ek baar left se right, next baar right se left – zigzag style */
+            animation-fill-mode: forwards;
+            /* Last state pe box wahi ka wahi rahega */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="box1">1</div> 
+        <br><br>
+        <div class="box2">2</div>
+    </div>
+</body>
+
+</html>

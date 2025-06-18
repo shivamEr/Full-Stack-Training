@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Loader Spinner</title>
+  <style>
+    .loader {
+      border: 8px solid #f3f3f3;         /* Light gray */
+      border-top: 8px solid #3498db;      /* Blue */
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+      margin: 100px auto; /* center it */
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader"></div>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dot Spinner Loader</title>
+  <style>
+    .dot-loader {
+      width: 1em;
+      height: 1em;
+      border-radius: 50%;
+      background: #3498db;
+      color: #3498db;
+      box-shadow:
+        1.5em 0 0 0 currentColor,
+        3em 0 0 0 currentColor;
+      animation: dots 0.8s infinite linear;
+      margin: 100px auto;
+    }
+
+    @keyframes dots {
+      0% {
+        box-shadow:
+          1.5em 0 0 0 currentColor,
+          3em 0 0 0 currentColor;
+      }
+      50% {
+        box-shadow:
+          1.5em 0 0 0 transparent,
+          3em 0 0 0 currentColor;
+      }
+      100% {
+        box-shadow:
+          1.5em 0 0 0 currentColor,
+          3em 0 0 0 transparent;
+      }
+    }
+
+    body {
+      background: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="dot-loader"></div>
+</body>
+</html>
+
+

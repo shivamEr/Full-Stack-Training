@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+  <!-- For Customizing Tailwind CSs -->
+  <!-- <style type="text/tailwindcss">
+    @theme {
+        --color-clifford: #da373d;
+      }
+    </style> -->
+</head>
+
+<body>
+  <div>
+    <br><br>
+    <h1 class="text-3xl text-red-400 font-bold underline">
+      Hello world!
+    </h1>
+    <h1 class="text-yellow-500 text-3xl font-bold loadingd overline">Hello Gi</h1>
+    <br>
+    <p class="border-2 border-blue-200 border-dashed bg-gray-100 text-center p-10">Border</p>
+    <br>
+    <p class="bg-gradient-to-r from-green-200 to-green-700 text-3xl text-center p-10 rounded-3xl m-10">Gradient</p>
+    <br><br>
+    <!-- Padding & Margin -->
+    <p class="bg-yellow-200 p-4 pt-10 py-12 border mx-auto">Padding & Margin</p><br>
+    <!-- OverFlow -->
+    <p class="bg-green-200 w-20 capitalize overflow-hidden overflow-auto overflow-scroll">This text is overflowing</p>
+    <br><br>
+    <!-- Custom Values Passing -->
+    <p class="bg-[linear-gradient(45deg,red,blue,green)] w-40 h-40 text-white">Custom Gradient</p>
+  </div>
+  <br><br>
+  <div class="border border-red-500 mx-auto w-[40vw] h-[40vh] flex gap-10 justify-center items-center flex-wrap">
+    <div class="border border-blue-400 w-12 h-12 animate-bounce">Flex</div>
+    <div class="border border-blue-400 w-12 h-12">Flex</div>
+    <div class="border border-blue-400 w-12 h-12 animate-bounce">Flex</div>
+    <div class="border border-blue-400 w-12 h-12">Flex</div>
+    <div class="border border-blue-400 w-12 h-12 animate-bounce">Flex</div>
+  </div>
+  <!-- Fan -->
+  <div class="">
+    <div
+      class="h-[70vh] w-[70vw] m-auto mt-10 flex justify-center items-center border border-red-400 rounded-[50%] bg-gray-300 p-15">
+      <button class="border border-red-400 w-[50%] bg-amber-200 cursor-alias animate-spin duration-1">O</button>
+    </div>
+    <div class="bg-red-900 w-[10vw] h-[100vh] mx-auto"></div>
+  </div>
+</body>
+
+</html>

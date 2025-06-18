@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="pt-20">
+    <nav class="bg-black flex justify-between items-center p-5 fixed top-0 w-full z-50">
+        <img src="image.png" alt="logo" class="h-12 w-12">
+
+        <!-- Menu Toggle for Mobile -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="sm:hidden cursor-pointer">
+            <svg viewBox="0 0 24 24" fill="none" class="w-8 h-8" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </label>
+
+        <!-- Navigation Links -->
+        <div
+            class="hidden peer-checked:flex sm:flex flex-col sm:flex-row absolute sm:static top-16 left-0 w-full sm:w-auto bg-black sm:bg-transparent items-center gap-5 p-5 sm:p-0">
+            <a href="#" class="text-white">Trending Reel</a>
+            <a href="#" class="text-white">Reels</a>
+            <a href="#" class="text-white">Comedy</a>
+            <a href="#" class="text-white">About Us</a>
+            <a href="#" class="text-white">Contact</a>
+        </div>
+    </nav>
+    <!-- Make the Hero section -->
+    <div class="hero h-screen bg-cover bg-center relative">
+        <img src="image.png" alt="" class="w-full h-full object-cover">
+        <h1>Exclusive One --</h1>
+    </div>
+    <div class="hero-text">
+        <p>Discover the latest trends and exclusive content</p>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Explore Now</button>
+    </div>
+    <div class="hero-text">
+        <p>Discover the latest trends and exclusive content</p>
+        <button class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded">Explore Now</button>
+    </div>
+
+</body>
+
+</html>
