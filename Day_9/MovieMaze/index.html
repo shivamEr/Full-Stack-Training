@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image.png" type="image/x-icon">
+    <title>MovieMaze - Search Your Favorite Movies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 MovieMaze</h1>
+        <p style="color: #aaa;">Find info on any movie in seconds</p>
+    </header>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search for a movie..." />
+        <button onclick="searchMovie()">Search</button>
+
+        <div class="container" id="container" style="display: flex; flex-wrap: wrap; column-gap: 10px;">
+            <!-- All Movies Will Append Here -->
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
