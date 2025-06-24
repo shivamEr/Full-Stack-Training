@@ -1,3 +1,9 @@
+    document.addEventListener('DOMContentLoaded',()=>{
+      let result = localStorage.getItem('obj');
+      result = JSON.parse(result);
+      if(result) createCard(result);
+    })
+    
     async function searchMovie() {
       const movieName = document.getElementById('searchInput').value;
       const resultDiv = document.getElementById('results');
@@ -9,6 +15,7 @@
 
       // For now, we'll just mock the result.
       let result = await fetchData(movieName.trim());
+      localStorage.setItem('obj',JSON.stringify(result));
       createCard(result);
     }
 
