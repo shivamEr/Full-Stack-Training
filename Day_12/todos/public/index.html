@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster - Manage Your Daily Todos</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <div class="w-[90vw] shadow-lg p-6 m-auto mt-12 flex flex-col gap-6 bg-white rounded-xl">
+        <h1 class="text-2xl font-semibold text-center text-green-600">TaskMaster</h1>
+
+        <!-- Task Input Form -->
+        <form class="flex gap-3 w-full" id="todo-form">
+            <input type="text" name="task" id="task" placeholder="Add a new task..." class="w-full border px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400" />
+            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-md">Add Task</button>
+        </form>
+
+        <!-- Filter Buttons -->
+        <div id="btn-container" class="flex gap-4 justify-center">
+            <button id="all" class="px-4 py-2 rounded-md bg-green-500 text-white font-medium">All</button>
+            <button id="active" class="px-4 py-2 rounded-md border font-medium">Active</button>
+            <button id="completed" class="px-4 py-2 rounded-md border font-medium">Completed</button>
+        </div>
+
+        <!-- Todo Items Container -->
+        <div id="item-container" class="grid gap-4">
+            <!-- Todos will be appended here dynamically -->
+        </div>
+
+        <!-- Clear Completed Button -->
+        <button onclick="clearCompleted()" class="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-md w-fit m-auto font-medium">Clear Completed</button>
+    </div>
+</body>
+
+</html>
