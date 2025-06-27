@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SMTP Server - Send data to email</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+            <input type="email" id="email" name="user_email" placeholder="Enter your email" required>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+            <button type="submit" id="btn">Send</button>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
