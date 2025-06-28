@@ -111,10 +111,10 @@ function renderTodos(todos) {
         div.innerHTML = `
             <span class="${todo.completed ? 'line-through text-gray-400' : ''}">${todo.task}</span>
             <div class="flex gap-2">
-                <button onclick="markCompleted('${todo.id}')" class="bg-green-500 text-white px-3 py-1 rounded-md text-sm">
+                <button onclick="markCompleted('${todo._id}')" class="bg-green-500 text-white px-3 py-1 rounded-md text-sm">
                     ${todo.completed ? 'Undo' : 'Complete'}
                 </button>
-                <button onclick="deleteTodo('${todo.id}')" class="bg-red-500 text-white px-3 py-1 rounded-md text-sm">
+                <button onclick="deleteTodo('${todo._id}')" class="bg-red-500 text-white px-3 py-1 rounded-md text-sm">
                     Delete
                 </button>
             </div>
