@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce Admin Panel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link href="https://unpkg.com/@heroicons/vue@2.0.16/24/outline/index.js" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="max-w-6xl mx-auto p-6">
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold">📦 Product Management</h1>
+            <input type="text" id="searchInput" placeholder="Search product..." class="mt-4 sm:mt-0 px-4 py-2 border border-gray-300 rounded-md shadow-sm w-full sm:w-72" />
+        </div>
+
+        <!-- Add Product -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-xl font-semibold mb-4">Add New Product</h2>
+            <form id="productForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" placeholder="Product Name" id="name" class="border p-2 rounded" required />
+                <input type="text" placeholder="Category" id="category" class="border p-2 rounded" required />
+                <input type="number" placeholder="Price" id="price" class="border p-2 rounded" required />
+                <input type="number" placeholder="Stock" id="stock" class="border p-2 rounded" required />
+                <input type="text" placeholder="Brand" id="brand" class="border p-2 rounded" />
+                <textarea placeholder="Description" id="description" class="border p-2 rounded col-span-1 sm:col-span-2" required></textarea>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded col-span-1 sm:col-span-2">Add Product</button>
+            </form>
+        </div>
+
+        <!-- Product List -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Product List</h2>
+            <table class="min-w-full border-collapse">
+                <thead>
+                    <tr class="bg-gray-100 text-left">
+                        <th class="p-3 border-b">Name</th>
+                        <th class="p-3 border-b">Category</th>
+                        <th class="p-3 border-b">Price</th>
+                        <th class="p-3 border-b">Stock</th>
+                        <th class="p-3 border-b">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productList">
+                    <!-- Dynamic rows inserted here -->
+                    <tr id="demo">
+                        <td class="p-3 border-b">iPhone 15</td>
+                        <td class="p-3 border-b">Electronics</td>
+                        <td class="p-3 border-b">₹999</td>
+                        <td class="p-3 border-b">10</td>
+                        <td class="p-3 border-b">
+                            <button class="text-indigo-600 hover:underline mr-3">Edit</button>
+                            <button class="text-red-600 hover:underline">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
